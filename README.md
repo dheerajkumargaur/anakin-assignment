@@ -1,7 +1,7 @@
-Cricket API
+# Cricket API
 This is a backend API for a cricket platform, similar to Cricbuzz. It allows admins to manage matches, players, and teams, and guest users to view match schedules and details.
 
-Table of Contents
+# Table of Contents
 Prerequisites
 Installation
 Database Setup
@@ -13,7 +13,7 @@ Prerequisites
 Node.js (version 14.x or later)
 PostgreSQL (version 12.x or later)
 Installation
-Clone the repository:
+# Clone the repository:
 
 git clone https://github.com/dheerajkumargaur/anakin-assignment.git
 Navigate to the project directory:
@@ -22,7 +22,7 @@ cd anakin-assignment
 Install Dependencies:
 
 npm install
-Database Setup
+# Database Setup
 The Cricket API uses PostgreSQL as the database. You'll need to create a new PostgreSQL database and update the connection details in the .env file.
 
 Create a new PostgreSQL database or use the default database named postgres
@@ -39,7 +39,7 @@ DB_PORT=5432
 JWT_SECRET=your_secret_key
 Replace the values with your actual PostgreSQL credentials and a secret key for JWT.
 
-API Endpoints and Testing
+# API Endpoints and Testing
 The Cricket API provides the following endpoints:
 
 Register Admin: [POST] /api/admin/signup
@@ -140,7 +140,3 @@ player_id INT NOT NULL,
 FOREIGN KEY (match_id) REFERENCES matches(id),
 FOREIGN KEY (player_id) REFERENCES players(id)
 );
-Assumptions
-The status field in the matches table can have the following values: upcoming, in_progress, completed.
-The role field in the players table can have values like batsman, bowler, all-rounder, wicket-keeper, etc.
-The teams table is used to store the players in each team for a match.
